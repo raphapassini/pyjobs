@@ -7,9 +7,11 @@ How to install
 ---------------
 
 1) Check if you have libxml2-dev and libffi-dev, if you doesn't install it:
+
 ```sudo apt-get install libxml2-dev libffi-dev```
 
 2) Install project requirements
+
 ```pip install -e requirements.txt```
 
 Please, be kind with yourself and install it in an virtualenv! :)
@@ -32,4 +34,3 @@ ROADMAP
 [ ] - Implement Catho.com.br spider
 [ ] - Implement Empregos.com.br spider
 [ ] - Implement Vagas.com.br spider
-pip
