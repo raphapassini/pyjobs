@@ -10,7 +10,7 @@ class CeviuSpider(scrapy.Spider):
     base_url = "http://ceviu.com.br"
     start_urls = [
         "http://www.ceviu.com.br/buscar/empregos?\
-         level=1&novaPesquisa=1&termoPesquisa=python",
+         level=1&novaPesquisa=1&termoPesquisa=python&itensPagina=10000000",
     ]
 
     def parse(self, response):
@@ -18,6 +18,9 @@ class CeviuSpider(scrapy.Spider):
         for i in items:
             job = JobItem()
             link = i.xpath('.//span[@class="tituloVaga"]/a')
+
+            job['uid'] = i.xpath(
+                './/span[@class="tituloVaga"]/@rel').extract()[0]
 
             job['link'] = "%s%s" % (self.base_url,
                                     link.xpath('@href').extract()[0])

@@ -13,5 +13,9 @@ BOT_NAME = 'pyjobs'
 SPIDER_MODULES = ['pyjobs.spiders']
 NEWSPIDER_MODULE = 'pyjobs.spiders'
 
+ITEM_PIPELINES = {
+    'pyjobs.pipelines.MongoPipeline': 0,
+}
+
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'pyjobs (+http://www.yourdomain.com)'

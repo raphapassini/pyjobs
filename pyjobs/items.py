@@ -15,6 +15,7 @@ class DmozItem(scrapy.Item):
 
 
 class JobItem(scrapy.Item):
+    uid = scrapy.Field()
     link = scrapy.Field()
     title = scrapy.Field()
     desc = scrapy.Field()
