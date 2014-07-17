@@ -6,8 +6,8 @@ Its a crawler with the goal of extract offers of python jobs from websites, most
 How to install
 ---------------
 
-1) Check if you have libxml2-dev, if you doesn't install it:
-```sudo apt-get install libxml2-dev```
+1) Check if you have libxml2-dev and libffi-dev, if you doesn't install it:
+```sudo apt-get install libxml2-dev libffi-dev```
 
 2) Install project requirements
 ```pip install -e requirements.txt```
@@ -32,3 +32,4 @@ ROADMAP
 [ ] - Implement Catho.com.br spider
 [ ] - Implement Empregos.com.br spider
 [ ] - Implement Vagas.com.br spider
+pip
