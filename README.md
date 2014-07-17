@@ -30,7 +30,11 @@ ROADMAP
 -------
 
 [ ] - Iterate over CEVIU search pages
+
 [ ] - Store items in database, preferably a NoSQL database such as MongoDB
+
 [ ] - Implement Catho.com.br spider
+
 [ ] - Implement Empregos.com.br spider
+
 [ ] - Implement Vagas.com.br spider
