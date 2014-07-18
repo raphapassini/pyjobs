@@ -20,5 +20,4 @@ class MongoPipeline(object):
             raise DropItem("%s already recorded" % (item['uid'], ))
         else:
             self.c.insert(item.__dict__.get('_values'))
-            print "%s recorded" % (item['uid'],)
             return item
