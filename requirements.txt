@@ -1,3 +1,6 @@
+Flask==0.10.1
+Flask-PyMongo==0.3.0
+Flask-RESTful==0.2.12
 Scrapy==0.24.2
 Twisted==14.0.0
 argparse==1.2.1
