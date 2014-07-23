@@ -53,3 +53,8 @@ coverage.xml
 # Sphinx documentation
 docs/_build/
 
+# Scrapyd files
+dbs/
+items/
+logs/
+*.pid

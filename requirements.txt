@@ -14,6 +14,7 @@ pyasn1-modules==0.0.5
 pycparser==2.10
 pymongo==2.7.1
 queuelib==1.1.1
+scrapy-mongodb==0.7.1
 service-identity==1.0.0
 six==1.7.3
 w3lib==1.6

@@ -14,8 +14,16 @@ SPIDER_MODULES = ['pyjobs.spiders']
 NEWSPIDER_MODULE = 'pyjobs.spiders'
 
 ITEM_PIPELINES = {
-    'pyjobs.pipelines.MongoPipeline': 0,
+    'scrapy_mongodb.MongoDBPipeline': 0,
 }
 
-# Crawl responsibly by identifying yourself (and your website) on the user-agent
+# Config MongoDB
+MONGODB_URI = 'mongodb://localhost:27017'
+MONGODB_DATABASE = 'pyjobs'
+MONGODB_COLLECTION = 'jobs'
+MONGODB_UNIQUE_KEY = 'uid'
+
+
+# Crawl responsibly by identifying yourself (and your website)
+# on the user-agent
 #USER_AGENT = 'pyjobs (+http://www.yourdomain.com)'
