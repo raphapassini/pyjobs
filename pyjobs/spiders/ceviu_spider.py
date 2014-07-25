@@ -20,11 +20,11 @@ class CeviuSpider(scrapy.Spider):
             link = i.xpath('.//span[@class="tituloVaga"]/a')
 
             job['uid'] = i.xpath(
-                './/span[@class="tituloVaga"]/@rel').extract()[0]
+                './/span[@class="tituloVaga"]/@rel').extract()[0] + self.name
 
             job['link'] = "%s%s" % (self.base_url,
                                     link.xpath('@href').extract()[0])
-            job['title'] = link.xpath('text()').extract()
+            job['title'] = link.xpath('text()').extract()[0]
 
             desc = i.xpath(
                 './/div[contains(@id, "descricao")]/text()').extract()[0]
