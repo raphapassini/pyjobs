@@ -19,7 +19,7 @@ Please, be kind with yourself and install it in an virtualenv! :)
 How to run it
 --------------
 
-```scrapy crawl ceviu```
+```scrapy crawl ceviu```  
 ```scrapy crawl catho```
 
 IMPORTANT
