@@ -15,6 +15,7 @@ class DmozItem(scrapy.Item):
 
 
 class JobItem(scrapy.Item):
+    provider = scrapy.Field()
     uid = scrapy.Field()
     link = scrapy.Field()
     title = scrapy.Field()
@@ -22,3 +23,5 @@ class JobItem(scrapy.Item):
     pay = scrapy.Field()
     state = scrapy.Field()
     city = scrapy.Field()
+    # created = scrapy.Field()
+    # modefied = scrapy.Field()
