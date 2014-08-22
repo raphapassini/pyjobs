@@ -6,9 +6,9 @@ Its a crawler with the goal of extract offers of python jobs from websites, most
 How to install
 ---------------
 
-1) Check if you have libxml2-dev and libffi-dev, if you doesn't install it:
+1) Check if you have libxml2-dev, libffi-dev, libssl-dev libxml2-dev libxslt-dev and mongodb, if you doesn't install it:
 
-```sudo apt-get install libxml2-dev libffi-dev```
+```sudo apt-get install libxml2-dev libffi-dev libssl-dev libxml2-dev libxslt-dev mongodb```
 
 2) Install project requirements
 
