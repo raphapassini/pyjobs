@@ -21,6 +21,9 @@ How to run it
 
 ```scrapy crawl ceviu```  
 ```scrapy crawl catho```
+```scrapy crawl vagas```
+```scrapy crawl empregos```
+
 
 IMPORTANT
 ---------

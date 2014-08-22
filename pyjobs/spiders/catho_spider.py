@@ -37,6 +37,8 @@ class CathoSpider(CrawlSpider):
         for i in items:
             job = JobItem()
 
+            job['provider'] = self.name
+            
             job['uid'] = i.xpath('@id').extract()[0] + self.name
 
             link = i.xpath('.//h2[@itemprop="title"]/a')
