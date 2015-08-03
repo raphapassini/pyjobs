@@ -14,30 +14,33 @@ class CeviuSpider(scrapy.Spider):
     ]
 
     def parse(self, response):
-        items = response.xpath('//div[contains(@class, "boxVaga")]')
+        items = response.xpath('//div[contains(@class, "box-vaga")]')
         for i in items:
             job = JobItem()
-            link = i.xpath('.//span[@class="tituloVaga"]/a')
+            link = i.xpath('.//h4/a')
 
             job['uid'] = i.xpath(
-                './/span[@class="tituloVaga"]/@rel').extract()[0] + self.name
+                './/p[@class="info-vaga-detalhe"]/span[2]/text()')\
+                .extract()[0].strip()
 
             job['link'] = "%s%s" % (self.base_url,
                                     link.xpath('@href').extract()[0])
             job['title'] = link.xpath('text()').extract()[0]
 
             desc = i.xpath(
-                './/div[contains(@id, "descricao")]/text()').extract()[0]
+                './/div[contains(@class, "descricao-vaga")]/p/text()')\
+                .extract()[0]
             job['desc'] = clean_str(desc)
 
-            cityState = clean_str(i.xpath(
-                './/div[contains(@id, "cidadeEstado")]/text()').extract()[0])
-            job['state'] = cityState.split('/')[1]
-            job['city'] = cityState.split('/')[0]
+            city_state = i.xpath(
+                './/p[contains(@class, "info-vaga-conteudo")]/span[2]/text()')\
+                .extract()[0].strip()
+            job['city'] = city_state.split('/')[0]
+            job['state'] = city_state.split('/')[1]
 
-            pay = clean_str(i.xpath(
-                './/div[contains(@id, "salario")]').xpath(
-                'text()').extract()[1])
+            pay = i.xpath(
+                './/p[contains(@class, "info-vaga-conteudo")]/span[1]/text()')\
+                .extract()[0].strip()
             job['pay'] = pay
 
             yield job
