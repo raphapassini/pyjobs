@@ -19,16 +19,10 @@ Please, be kind with yourself and install it in an virtualenv! :)
 How to run it
 --------------
 
-```scrapy crawl ceviu```  
+```scrapy crawl ceviu```
 ```scrapy crawl catho```
 ```scrapy crawl vagas```
 ```scrapy crawl empregos```
-
-
-IMPORTANT
----------
-
-The only working spider is CEVIU, but you can help, see the Roadmap bellow.
 
 ROADMAP
 -------
@@ -42,3 +36,5 @@ ROADMAP
 [ ] - Implement Empregos.com.br spider
 
 [ ] - Implement Vagas.com.br spider
+
+[ ] - Build an web interface to search for jobs
