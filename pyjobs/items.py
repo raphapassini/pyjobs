@@ -8,18 +8,14 @@
 import scrapy
 
 
-class DmozItem(scrapy.Item):
-    title = scrapy.Field()
-    link = scrapy.Field()
-    desc = scrapy.Field()
-
-
 class JobItem(scrapy.Item):
+    """ Represent a single job offer """
     provider = scrapy.Field()
     uid = scrapy.Field()
     link = scrapy.Field()
     title = scrapy.Field()
     desc = scrapy.Field()
+    full_desc = scrapy.Field()
     pay = scrapy.Field()
     state = scrapy.Field()
     city = scrapy.Field()
