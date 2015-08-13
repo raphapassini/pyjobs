@@ -51,16 +51,16 @@
 <script src="{{ url_for('static', filename='js/vendor/jquery-1.11.0.min.js') }}"></script>
 <script src="{{ url_for('static', filename='js/vendor/bootstrap.min.js') }}"></script>
 <script src="{{ url_for('static', filename='js/vendor/amplify.min.js') }}"></script>
-<script src="https://fb.me/react-0.13.3.js"></script>
+<script src="{{ url_for('static', filename='js/vendor/react.js') }}"></script>
 <script src="{{ url_for('static', filename='js/stores.js') }}"></script>
 <script src="{{ url_for('static', filename='js/react_components.js') }}"></script>
 <script src="{{ url_for('static', filename='js/react_controller.js') }}"></script>
-<script src="{{ url_for('static', filename='js/main.js') }}"></script>
 <script>
     var config = {
         redirect_url: '{{ url_for('redir') }}'
     }
 </script>
+{% block extra_scripts %}{% endblock %}
 </body>
 
 </html>
