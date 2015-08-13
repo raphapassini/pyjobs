@@ -5,3 +5,4 @@ Jinja2==2.8
 Scrapy==1.0.1
 pymongo==2.7.1
 scrapy-mongodb==0.7.1
+selenium==2.47.1
