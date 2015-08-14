@@ -12,7 +12,7 @@ How to install
 
 2) Install project requirements
 
-```pip install -e requirements.txt```
+```pip install -r requirements.txt```
 
 Please, be kind with yourself and install it in an virtualenv! :)
 
@@ -33,8 +33,8 @@ ROADMAP
 
 [x] - Implement Catho.com.br spider
 
-[ ] - Implement Empregos.com.br spider
+[x] - Implement Empregos.com.br spider
 
-[ ] - Implement Vagas.com.br spider
+[x] - Implement Vagas.com.br spider
 
-[ ] - Build an web interface to search for jobs
+[] - Build an web interface to search for jobs

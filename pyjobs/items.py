@@ -20,4 +20,4 @@ class JobItem(scrapy.Item):
     state = scrapy.Field()
     city = scrapy.Field()
     # created = scrapy.Field()
-    # modefied = scrapy.Field()
+    # modified = scrapy.Field()
